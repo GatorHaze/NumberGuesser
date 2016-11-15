@@ -10,7 +10,18 @@ namespace numberguesser
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Give me a random number between 1 and 100");
+            Random randomNum = new Random();
+            int getRandomNumber = randomNum.Next(0, 100);
+            Console.WriteLine($"The number {getRandomNumber} was generated!");
+
+          
+
+
+
+
+
+
+            //Console.WriteLine("Please enter a random number between 1 and 100");
             var input = Console.ReadLine();
         }
     }
