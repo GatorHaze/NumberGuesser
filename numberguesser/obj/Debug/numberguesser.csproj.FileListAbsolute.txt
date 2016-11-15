@@ -1,6 +1,0 @@
-C:\Users\Justin Hazlewood\tiy\week-2\day-2\numberguesser\numberguesser\bin\Debug\numberguesser.exe.config
-C:\Users\Justin Hazlewood\tiy\week-2\day-2\numberguesser\numberguesser\bin\Debug\numberguesser.exe
-C:\Users\Justin Hazlewood\tiy\week-2\day-2\numberguesser\numberguesser\bin\Debug\numberguesser.pdb
-C:\Users\Justin Hazlewood\tiy\week-2\day-2\numberguesser\numberguesser\obj\Debug\numberguesser.csprojResolveAssemblyReference.cache
-C:\Users\Justin Hazlewood\tiy\week-2\day-2\numberguesser\numberguesser\obj\Debug\numberguesser.exe
-C:\Users\Justin Hazlewood\tiy\week-2\day-2\numberguesser\numberguesser\obj\Debug\numberguesser.pdb
