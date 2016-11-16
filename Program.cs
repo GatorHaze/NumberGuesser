@@ -11,50 +11,45 @@ namespace numberguesser
         static void Main(string[] args)
         {
             Random randomNum = new Random();
-            int getRandomNumber = randomNum.Next(0, 100);
-            Console.WriteLine($"The number {getRandomNumber} was generated!");
+            int randomNumber = randomNum.Next(0, 100);
+            Console.WriteLine($"The number {randomNumber} was generated!");
 
-
-            var num = 0;
+            var input = 0;
             var attempts = 0;
             var lastNum = 0;
-            var maxtries = 5;
+            var maxatt = 5;
 
-
-            while (attempts < maxtries && getRandomNumber != num)
+            while (attempts < maxatt && input != randomNumber)
             {
-                lastNum = num;
-                Console.WriteLine("Please enter a random number between 1 and 100");
-                var newNum = int.TryParse(Console.ReadLine(), out num);
-                attempts++;
+                lastNum = input;
+                Console.WriteLine("Feeling Lucky? Enter a random number between 1 and 100");
+                var newNum = int.TryParse(Console.ReadLine(), out input);
+                Console.WriteLine((1 + (attempts++)) + " attempts so far");
 
-
-                if (attempts >= maxtries)
+                if (lastNum < randomNumber)
                 {
-                    Console.WriteLine("Your tries are up, and you Lose");
-                    Console.ReadLine();
-
+                    Console.WriteLine($"{input} Fell short, you need to go higher");
                 }
-
-                else if (num == getRandomNumber)
+                else if (lastNum > randomNumber)
                 {
-                    Console.WriteLine("Awesome! You WIN!!!");
-                    Console.ReadLine();
+                    Console.WriteLine($"{lastNum} is too high, calm down!");
                 }
-
-                if (lastNum > getRandomNumber && num > lastNum)
-                { Console.WriteLine("Still need to go lower!"); }
-
-
-                else if (lastNum < getRandomNumber)
+                else
                 {
-                    Console.WriteLine($"Fell a little short, you need to go higher");
-                }
-                else if (lastNum > getRandomNumber)
-                {
-                    Console.WriteLine($"{num} is too high, calm down!");
+                    Console.WriteLine("try again!");
                 }
             }
+
+            if (input == randomNumber)
+            {
+                Console.WriteLine("Congradulations you are a GENIUS!!!!!");
+                Console.ReadLine();
+            }
+            if (attempts >= maxatt)
+            {
+                Console.WriteLine("Your tries are up, you Lose!" + " The number was " + randomNumber);
+                Console.ReadLine();
+            }
         }
-    }
+    }  
 }
